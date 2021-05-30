@@ -9,11 +9,12 @@ const game_container =document.getElementById('game-container');
 let seconds =0;
 let score =0;
 let selected_insect={}
-start_btn.addEventListener('click',()=>screens[0].classList.add['up']);
+start_btn.addEventListener('click',()=>screens[0].classList.add('up'));
+
 choose_insect_btns.forEach(btn=>{
     btn.addEventListener('click',()=>{
         const img= btn.querySelector('img')
-        const src= btn.getAttribute('src')
+        const src= img.getAttribute('src') //src    
         const alt= img.getAttribute('alt')
         selected_insect = {src,alt}
         screens[1].classList.add('up')
@@ -28,18 +29,18 @@ function startGame(){
 function increaseTime(){
     let m = Math.floor(seconds/60)
     let s = seconds%60
-    m = m<10 ? '0${m}':m
-    s = s<10 ? '0${s}':s
-    timeEl.innerHTML = 'Time:${m}:${s}'
+    m = m<10 ? `0${m}`:m
+    s = s<10 ? `0${s}`:s
+    timeEl.innerHTML = `Time:${m}:${s}`
     seconds++
 }
 function createInsect(){
     const insect = document.createElement('div')
     insect.classList.add('insect')
     const {x,y}=getRandomLocation()
-    insect.style.top='${x}px'
-    insect.style.left='${y}px'
-    insect.innerHTML = '<img src ="${selected_insect.src}" alt="${selected_insect.alt}" style = "transform:rotate($Math.random()*360}deg)"/>'
+    insect.style.top=`${x}px`
+    insect.style.left=`${y}px`
+    insect.innerHTML = `<img src ="${selected_insect.src}" alt="${selected_insect.alt}" style = "transform:rotate(${Math.random()*360}deg)"/>`
     insect.addEventListener('click',killInsect)
     game_container.appendChild(insect)
 }
@@ -59,8 +60,8 @@ function killInsect(){
 
 }
 function addInsects(){
-    setTimeout(killInsect,1000);
-    setTimeout(killInsect,1500)
+    setTimeout(createInsect,1000);
+    setTimeout(createInsect,1500);
 }
 function increaseScore(){
     score++
@@ -68,6 +69,6 @@ function increaseScore(){
         message.classList.add('visible');
 
     }
-    scoreEl.innerHTML= 'Score: ${score}'
+    scoreEl.innerHTML= `Score: ${score}`
 
 }
