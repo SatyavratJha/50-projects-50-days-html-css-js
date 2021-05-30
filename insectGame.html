@@ -4,13 +4,15 @@
 <meta charset = "UTF-8" />
 <meta name ="viewport" content = "width= device-width, initial-scale=1.0" />
 <link rel= "stylesheet" href = "insectGame.css" />
-<title>Insect Game</title>
+<title>Kill the Insect Game</title>
 </head>
 <body>
 <div class="screen">
     <h1>Kill the Insect</h1>
     <button class="btn" id="start-btn">PLAY GAME</button>
-    <div class="screen">
+</div>
+
+<div class="screen">
         <h1>Choose your most disgusted Insect</h1>
         <ul class="insects-list">
             <li>
@@ -50,16 +52,16 @@
                 </button>
             </li>
         </ul>
-    </div>
+</div>
 
-    <div class="screen game-container" id="game-container">
-        <h3 id="time" >Time: 00:00</h3>
-        <h3 id="score" >Score: 0</h3>
-        <h5 id="message"  >
+<div class="screen game-container" id="game-container">
+        <h3 id="time" class="time">Time: 00:00</h3>
+        <h3 id="score" class="score">Score: 0</h3>
+        <h5 id="message" class="message" >
             Are you annoyed yet? <br>
             you are playing an impossible game 
         </h5>
-    </div>
+</div>
 
     <!--
 class="visible 
@@ -69,7 +71,7 @@ class="visible
     </div>
     -->
 
-</div>
+
 <script src="insectGame.js"></script>
 </body>
 </html>
