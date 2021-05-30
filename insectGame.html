@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8" />
+<meta name ="viewport" content = "width= device-width, initial-scale=1.0" />
+<link rel= "stylesheet" href = "insectGame.css" />
+<title>Insect Game</title>
+</head>
+<body>
+<div class="screen">
+    <h1>Kill the Insect</h1>
+    <button class="btn" id="start-btn">PLAY GAME</button>
+    <div class="screen">
+        <h1>Choose your most disgusted Insect</h1>
+        <ul class="insects-list">
+            <li>
+                <button class="choose-insect-btn">
+                    <p>
+                        Housefly
+                    </p>
+                    <img src="housefly.jpg" alt="Housefly"> 
+
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>
+                        Mosquito
+                    </p>
+                    <img src="mosquito.jpg" alt="Mosquito"> 
+                    
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>
+                        DragonFly
+                    </p>
+                    <img src="dragonfly.webp" alt="DragonFly"> 
+                    
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>
+                        Coackroach 
+                    </p>
+                    <img src="coackroach.webp" alt="Coackroach"> 
+                    
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+        <h3 id="time" >Time: 00:00</h3>
+        <h3 id="score" >Score: 0</h3>
+        <h5 id="message"  >
+            Are you annoyed yet? <br>
+            you are playing an impossible game 
+        </h5>
+    </div>
+
+    <!--
+class="visible 
+
+    <div class="insect">
+        <img src="" alt="">
+    </div>
+    -->
+
+</div>
+<script src="insectGame.js"></script>
+</body>
+</html>
